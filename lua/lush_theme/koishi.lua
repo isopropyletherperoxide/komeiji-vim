@@ -45,6 +45,20 @@
 local lush = require('lush')
 local hsl = lush.hsl
 
+local satori1 = hsl("#fbdee9")
+local satori2 = hsl("#dba0da")
+local satori3 = hsl("#ca191d")
+local satori4 = hsl("#dc96b2")
+local satori5 = hsl("#fff1a4")
+local satori6 = hsl("#7891b0")
+local koishi1 = hsl("#1b1c1e")
+local koishi2 = hsl("#94a39e")
+local koishi3 = hsl("#5ac69b")
+local koishi4 = hsl("#33e6e2")
+local koishi5 = hsl("#ba94cd")
+local koishi6 = hsl("#f2cc83")
+
+
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
 ---@diagnostic disable: undefined-global
@@ -61,14 +75,15 @@ local theme = lush(function(injected_functions)
     --
     -- See :h highlight-groups
     --
-    -- ColorColumn  { }, -- Columns set with 'colorcolumn'
-    -- Conceal      { }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
-    -- Cursor       { }, -- Character under the cursor
-    -- lCursor      { }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
+     ColorColumn  { bg = hsl("#303030") }, -- Columns set with 'colorcolumn'
+     Normal       { bg = koishi1, fg = satori1  }, -- Normal text
+    Conceal      { fg=hsl("#585858"), bg = hsl("#1c1c1c") }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
+    Cursor       { fg=koishi2, bg = hsl("#c6c6c6") }, -- Character under the cursor
+    lCursor      { Normal }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
     -- CursorIM     { }, -- Like Cursor, but used when in IME mode |CursorIM|
-    -- CursorColumn { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    -- CursorLine   { }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
-    -- Directory    { }, -- Directory names (and other special names in listings)
+     CursorLine   { bg = hsl("#303030")}, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorColumn { CursorLine }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    Directory    { fg = hsl("#00afaf") }, -- Directory names (and other special names in listings)
     -- DiffAdd      { }, -- Diff mode: Added line |diff.txt|
     -- DiffChange   { }, -- Diff mode: Changed line |diff.txt|
     -- DiffDelete   { }, -- Diff mode: Deleted line |diff.txt|
@@ -77,24 +92,23 @@ local theme = lush(function(injected_functions)
     -- TermCursor   { }, -- Cursor in a focused terminal
     -- TermCursorNC { }, -- Cursor in an unfocused terminal
     -- ErrorMsg     { }, -- Error messages on the command line
-    -- VertSplit    { }, -- Column separating vertically split windows
-    -- Folded       { }, -- Line used for closed folds
+     VertSplit    { bg = koishi1, fg=koishi1 }, -- Column separating vertically split windows
+    Folded       { fg = hsl("#d787ff"), bg = hsl("#5f005f") }, -- Line used for closed folds
     -- FoldColumn   { }, -- 'foldcolumn'
     -- SignColumn   { }, -- Column where |signs| are displayed
     -- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     -- Substitute   { }, -- |:substitute| replacement text highlighting
-    -- LineNr       { }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    LineNr       { fg=hsl("#585858"), bg=hsl("#1c1c1c") }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     -- CursorLineNr { }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     -- MatchParen   { }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
     -- MsgArea      { }, -- Area for messages and cmdline
     -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     -- MoreMsg      { }, -- |more-prompt|
-    -- NonText      { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    -- Normal       { }, -- Normal text
-    -- NormalFloat  { }, -- Normal text in floating windows.
+    NonText      { bg=hsl("#1c1c1c"), fg=hsl("#585858")}, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+     Pmenu        { fg= hsl("#c6c6c6"), bg = hsl("#303030") }, -- Popup menu: Normal item.
+     NormalFloat  { Pmenu }, -- Normal text in floating windows.
     -- NormalNC     { }, -- normal text in non-current windows
-    -- Pmenu        { }, -- Popup menu: Normal item.
     -- PmenuSel     { }, -- Popup menu: Selected item.
     -- PmenuSbar    { }, -- Popup menu: Scrollbar.
     -- PmenuThumb   { }, -- Popup menu: Thumb of the scrollbar.
@@ -115,8 +129,8 @@ local theme = lush(function(injected_functions)
     -- Visual       { }, -- Visual mode selection
     -- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
     -- WarningMsg   { }, -- Warning messages
-    -- Whitespace   { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
-    -- Winseparator { }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
+    Whitespace   { NonText }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    Winseparator { VertSplit }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
     -- WildMenu     { }, -- Current match in 'wildmenu' completion
 
     -- Common vim syntax groups used for all kinds of code and markup.
@@ -127,22 +141,22 @@ local theme = lush(function(injected_functions)
     --
     -- Uncomment and edit if you want more specific syntax highlighting.
 
-    -- Comment        { }, -- Any comment
+    Comment        { fg=satori6 }, -- Any comment
 
-    -- Constant       { }, -- (*) Any constant
+    Constant       { fg=satori4}, -- (*) Any constant
     -- String         { }, --   A string constant: "this is a string"
     -- Character      { }, --   A character constant: 'c', '\n'
     -- Number         { }, --   A number constant: 234, 0xff
     -- Boolean        { }, --   A boolean constant: TRUE, false
     -- Float          { }, --   A floating point constant: 2.3e10
 
-    -- Identifier     { }, -- (*) Any variable name
+    Identifier     { fg=satori2 }, -- (*) Any variable name
     -- Function       { }, --   Function name (also: methods for classes)
 
-    -- Statement      { }, -- (*) Any statement
+    Statement      { fg=koishi6}, -- (*) Any statement
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
     -- Repeat         { }, --   for, do, while, etc.
-    -- Label          { }, --   case, default, etc.
+    Label          { fg=koishi4 }, --   case, default, etc.
     -- Operator       { }, --   "sizeof", "+", "*", etc.
     -- Keyword        { }, --   any other keyword
     -- Exception      { }, --   try, catch, throw
@@ -153,12 +167,12 @@ local theme = lush(function(injected_functions)
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    -- Type           { }, -- (*) int, long, char, etc.
+    Type           { fg=koishi3 }, -- (*) int, long, char, etc.
     -- StorageClass   { }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
 
-    -- Special        { }, -- (*) Any special symbol
+    Special        { fg=koishi6 }, -- (*) Any special symbol
     -- SpecialChar    { }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
     -- Delimiter      { }, --   Character that needs attention
@@ -167,7 +181,7 @@ local theme = lush(function(injected_functions)
 
     -- Underlined     { gui = "underline" }, -- Text that stands out, HTML links
     -- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
-    -- Error          { }, -- Any erroneous construct
+     Error          { bg=satori3, Normal}, -- Any erroneous construct
     -- Todo           { }, -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     -- These groups are for the native LSP client and diagnostic system. Some
