@@ -1,5 +1,4 @@
-A Lush Theme for Neovim.
+``koishi-nvim``
 ===
 
-See: http://git.io/lush.nvim for more information on Lush and a helper script
-to setup your repo clone.
+A neovim colorscheme. Made with lush.
