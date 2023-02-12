@@ -23,4 +23,4 @@ highlight Type guifg=#58C69A guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight VertSplit guifg=#1B1C1D guibg=#1B1C1D guisp=NONE blend=NONE gui=NONE
 highlight! link Winseparator VertSplit
 set background=dark
-let g:colors_name="my_colorscheme"
+let g:colors_name="komeji"
