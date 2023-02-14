@@ -1,7 +1,9 @@
 ``komeji-vim``
 ===
 
-A (neo)vim colorscheme. Inspired by [this tweet](https://twitter.com/KTx3rl8o/status/1583662940846100480/) Made with [Lush](https://github.com/rktjmp/lush.nvim).
+A (Neo)vim colorscheme. Inspired by [this tweet](https://twitter.com/KTx3rl8o/status/1583662940846100480/). 
+
+Made with [Lush](https://github.com/rktjmp/lush.nvim).
 
 ### Screenshots
 
