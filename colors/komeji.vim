@@ -7,6 +7,7 @@ highlight Constant guifg=#DD98B3 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Cursor guifg=#94A49E guibg=#C7C7C7 guisp=NONE blend=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#303030 guisp=NONE blend=NONE gui=NONE
 highlight! link CursorColumn CursorLine
+highlight CursorLineNr guifg=#FFF1A3 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Directory guifg=#00ADAD guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Error guifg=#FBDFEA guibg=#CC191C guisp=NONE blend=NONE gui=NONE
 highlight ErrorMsg guifg=#FBDFEA guibg=#CC191C guisp=NONE blend=NONE gui=NONE
@@ -25,6 +26,7 @@ highlight Statement guifg=#F2CB82 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Type guifg=#58C69A guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight VertSplit guifg=#1B1C1D guibg=#1B1C1D guisp=NONE blend=NONE gui=NONE
 highlight! link Winseparator VertSplit
+highlight Visual guifg=#1B1C1D guibg=#B993CC guisp=NONE blend=NONE gui=NONE
 highlight Whitespace guifg=#595959 guibg=#1B1C1D guisp=NONE blend=NONE gui=NONE
 set background=dark
 let g:colors_name="komeji"
