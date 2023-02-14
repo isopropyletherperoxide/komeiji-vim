@@ -5,7 +5,7 @@ A (neo)vim colorscheme. Made with lush.
 
 ### Screenshots
 
-<img alt="Screenshot 1" src="https://github.com/isopropyletherperoxide/komeji-vim/blob/main/images/screenshot_1.png?raw=true" width=256>
+<img alt="Screenshot 1" src="https://github.com/isopropyletherperoxide/komeji-vim/blob/main/images/screenshot_1.png?raw=true" width=512>
 
 ### Installation
 Use a ``vim`` plugin manager like ``plug``:
