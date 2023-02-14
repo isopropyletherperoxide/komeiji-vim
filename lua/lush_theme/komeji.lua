@@ -105,7 +105,7 @@ local theme = lush(function(injected_functions)
     -- MsgArea      { }, -- Area for messages and cmdline
     -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     -- MoreMsg      { }, -- |more-prompt|
-    NonText      { bg=hsl("#1c1c1c"), fg=hsl("#585858")}, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText      { bg=koishi1, fg=hsl("#585858")}, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
      Pmenu        { fg= hsl("#c6c6c6"), bg = hsl("#303030") }, -- Popup menu: Normal item.
      NormalFloat  { Pmenu }, -- Normal text in floating windows.
     -- NormalNC     { }, -- normal text in non-current windows
@@ -129,7 +129,9 @@ local theme = lush(function(injected_functions)
     -- Visual       { }, -- Visual mode selection
     -- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
     -- WarningMsg   { }, -- Warning messages
-    Whitespace   { bg=hsl("#1c1c1c"), fg = hsl("#585858") }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    Whitespace   { bg=koishi1, fg = hsl("#585858") }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    IndentBlanklineChar   { bg=koishi1, fg = hsl("#585858") }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    IndentBlanklineContextChar   { bg=koishi1, fg = koishi4 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     Winseparator { VertSplit }, -- Sephttps://github.com/isopropyletherperoxide/komeji-vimarator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
     -- WildMenu     { }, -- Current match in 'wildmenu' completion
 
