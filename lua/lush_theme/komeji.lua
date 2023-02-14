@@ -91,7 +91,7 @@ local theme = lush(function(injected_functions)
     -- EndOfBuffer  { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
     -- TermCursor   { }, -- Cursor in a focused terminal
     -- TermCursorNC { }, -- Cursor in an unfocused terminal
-    -- ErrorMsg     { }, -- Error messages on the command line
+    ErrorMsg     { fg=satori1, bg=satori3 }, -- Error messages on the command line
      VertSplit    { bg = koishi1, fg=koishi1 }, -- Column separating vertically split windows
     Folded       { fg = hsl("#d787ff"), bg = hsl("#5f005f") }, -- Line used for closed folds
     -- FoldColumn   { }, -- 'foldcolumn'
@@ -114,7 +114,7 @@ local theme = lush(function(injected_functions)
     -- PmenuThumb   { }, -- Popup menu: Thumb of the scrollbar.
     -- Question     { }, -- |hit-enter| prompt and yes/no questions
     -- QuickFixLine { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    -- Search       { }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
+    Search       { bg=koishi5, fg=koishi1 }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
     -- SpecialKey   { }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
     -- SpellBad     { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -129,8 +129,8 @@ local theme = lush(function(injected_functions)
     -- Visual       { }, -- Visual mode selection
     -- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
     -- WarningMsg   { }, -- Warning messages
-    Whitespace   { NonText }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
-    Winseparator { VertSplit }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
+    Whitespace   { bg=hsl("#1c1c1c"), fg = hsl("#585858") }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    Winseparator { VertSplit }, -- Sephttps://github.com/isopropyletherperoxide/komeji-vimarator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
     -- WildMenu     { }, -- Current match in 'wildmenu' completion
 
     -- Common vim syntax groups used for all kinds of code and markup.
