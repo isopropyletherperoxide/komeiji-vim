@@ -12,7 +12,7 @@ Made with [Lush](https://github.com/rktjmp/lush.nvim).
 <img alt="Screenshot 2" src="https://github.com/isopropyletherperoxide/komeji-vim/blob/main/images/screenshot_2.png?raw=true" width=1024>
 
 ### Installation
-Use a ``vim`` plugin manager like ``plug``:
+Use a vim plugin manager like Vim-plug:
 
 ```
 Plug 'isopropyletherperoxide/komeji-vim'
