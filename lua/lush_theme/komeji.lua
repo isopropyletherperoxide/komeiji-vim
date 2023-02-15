@@ -95,7 +95,7 @@ local theme = lush(function(injected_functions)
      VertSplit    { bg = koishi1, fg=koishi1 }, -- Column separating vertically split windows
     Folded       { fg = hsl("#d787ff"), bg = hsl("#5f005f") }, -- Line used for closed folds
     -- FoldColumn   { }, -- 'foldcolumn'
-    -- SignColumn   { }, -- Column where |signs| are displayed
+    SignColumn   { bg = koishi1, fg = satori1 }, -- Column where |signs| are displayed
     -- IncSearch    { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     -- Substitute   { }, -- |:substitute| replacement text highlighting
     LineNr       { fg=hsl("#585858"), bg=hsl("#1c1c1c") }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -120,12 +120,12 @@ local theme = lush(function(injected_functions)
     -- SpellCap     { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     -- SpellLocal   { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     -- SpellRare    { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
-    -- StatusLine   { }, -- Status line of current window
-    -- StatusLineNC { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+     StatusLine   { }, -- Status line of current window
+     -- StatusLineNC { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     -- TabLine      { }, -- Tab pages line, not active tab page label
     -- TabLineFill  { }, -- Tab pages line, where there are no labels
     -- TabLineSel   { }, -- Tab pages line, active tab page label
-    -- Title        { }, -- Titles for output from ":set all", ":autocmd" etc.
+   Title        { fg=satori2.saturate(150)}, -- Titles for output from ":set all", ":autocmd" etc.
    Visual       { bg=koishi5, fg=koishi1 }, -- Visual mode selection
     -- VisualNOS    { }, -- Visual mode selection when vim is "Not Owning the Selection".
     -- WarningMsg   { }, -- Warning messages
