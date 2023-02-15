@@ -21,8 +21,11 @@ highlight NonText guifg=#595959 guibg=#1B1C1D guisp=NONE blend=NONE gui=NONE
 highlight Pmenu guifg=#C7C7C7 guibg=#303030 guisp=NONE blend=NONE gui=NONE
 highlight! link NormalFloat Pmenu
 highlight Search guifg=#1B1C1D guibg=#B993CC guisp=NONE blend=NONE gui=NONE
+highlight SignColumn guifg=#FBDFEA guibg=#1B1C1D guisp=NONE blend=NONE gui=NONE
 highlight Special guifg=#F2CB82 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Statement guifg=#F2CB82 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight StatusLine guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight Title guifg=#FF7AFD guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Type guifg=#58C69A guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight VertSplit guifg=#1B1C1D guibg=#1B1C1D guisp=NONE blend=NONE gui=NONE
 highlight! link Winseparator VertSplit
