@@ -1,6 +1,6 @@
 -- shipwright_build.lua
 
-local colorscheme = require("lua/lush_theme/komeji")
+local colorscheme = require("lua/lush_theme/komeiji")
 local lushwright = require("shipwright.transform.lush")
 
 -- we start by calling run and giving it our colorscheme as the first argument.
@@ -22,11 +22,11 @@ run(colorscheme,
   --
   -- append() accepts a table of values, or one value, so this call ends up being:
   -- append(last_pipe_value, {"set...",  "let..."})
-  {append, {"set background=dark", "let g:colors_name=\"komeji\""}},
+  {append, {"set background=dark", "let g:colors_name=\"komeiji\""}},
 
   -- now we are ready to write our colors file. note: there is no reason this has
   -- to be written to the relative "colors" dir, you could write the file to an
   -- entirely different vim plugin.
-  {overwrite, "colors/komeji.vim"})
+  {overwrite, "colors/komeiji.vim"})
 
 -- and that is the whole build file
