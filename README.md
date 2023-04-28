@@ -1,4 +1,4 @@
-``komeji-vim``
+``komeiji-vim``
 ===
 
 A (Neo)vim colorscheme. Inspired by [this tweet](https://twitter.com/KTx3rl8o/status/1583662940846100480/). 
@@ -15,13 +15,13 @@ Made with [Lush](https://github.com/rktjmp/lush.nvim).
 Use a vim plugin manager like Vim-plug:
 
 ```
-Plug 'isopropyletherperoxide/komeji-vim'
+Plug 'isopropyletherperoxide/komeiji-vim'
 ```
 
 Set colorscheme with
 
 ```
-colorscheme komeji
+colorscheme komeiji
 ```
 
 in the Vim commandline
